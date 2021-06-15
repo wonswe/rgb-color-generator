@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <title>color generator</title>
+</head>
+<body>
+  
+  <div id="rgbValue" style="display: none;">rgbValue</div>
+
+  <h1>rgb color generator</h1>
+
+  <div class="container">
+    <label id="desc">↓ click to copy ↓</label>
+    <button id="copy-button"><p id="rgb">rgb(0,0,0)</p></button>
+
+    <label for="rgb">red :</label>
+    <input type="range" id="red" name="red" value=0 min="0" max="255">
+  
+    <label for="rgb">green :</label>
+    <input type="range" id="green" name="green" value=0 min="0" max="255">
+  
+    <label for="rgb">blue :</label>
+    <input type="range" id="blue" name="blue" value=0 min="0" max="255">
+
+    <!-- <div class="night-day">
+      <input type="button" id="night-mode" value="night">
+      <input type="button" id="day-mode" value="day">
+    </div> -->
+
+    <div class="button-container">
+      <input type="button" id="reset-button" value="reset" onClick="window.location.reload()">
+    </div>
+
+  </div>
+
+</body>
+</html>
