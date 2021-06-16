@@ -42,6 +42,9 @@ const rgbValues = document.querySelector("#rgb");
 function handleRGBValues(rgbValues) {
   document.documentElement.style.setProperty("--bg-color", rgbValues);
 
+  if (rgbValues == "rgb(255,255,255)") { invertBlack() }
+  else { invertWhite() }
+
   // copy rgb value to clipboard //
 
   const body = document.getElementsByTagName('body')[0];
@@ -61,6 +64,17 @@ function handleRGBValues(rgbValues) {
     copyRGB(rgbField);
 
   })
+}
+
+// invert color handler //
+function invertBlack() {
+  document.documentElement.style.setProperty("--default-text", "black");
+  document.documentElement.style.setProperty("--default-bg", "black");
+}
+
+function invertWhite() {
+  document.documentElement.style.setProperty("--default-text", "white");
+  document.documentElement.style.setProperty("--default-bg", "white");
 }
 
 // night & day mode toggle - incomplete //
